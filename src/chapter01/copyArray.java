@@ -4,11 +4,12 @@ import static java.lang.System.arraycopy;
 
 /**
  * Created by Peng on 2015/12/10.
+ * using function array copy.
  */
-public class copyArray {
+public class CopyArray {
     public static void main(String[] args) {
 
-        arrayPrinter mArrayPrinter = new arrayPrinter();
+        ArrayPrinter mArrayPrinter = new ArrayPrinter();
 
         int[] sourceArray = {1, 3, 2, 4, 5, 6, 2, 65, 7, 43};
         int[] targetArray = new int[sourceArray.length];
