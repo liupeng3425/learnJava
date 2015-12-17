@@ -2,6 +2,7 @@ package chapter01;
 
 /**
  * Created by Peng on 2015/11/27.
+ * Grammar of declare a array.
  */
 public class ArrayDeclaration {
     public static void main(String[] args) {

@@ -1,9 +1,10 @@
 package chapter01;
 
-import javax.swing.JOptionPane;
+import javax.swing.*;
 
 /**
  * Created by Peng on 2015/11/24.
+ * create a message dialog.
  */
 public class WelcomeInMessageDialogBox {
     public static void main(String[] ars) {
