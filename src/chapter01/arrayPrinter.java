@@ -9,23 +9,27 @@ public class ArrayPrinter {
         for (int tmp : array) {
             System.out.print(tmp + "\t");
         }
+        System.out.println();
     }
 
     public void printArray(char[] array) {
         for (char tmp : array) {
             System.out.print(tmp + "\t");
         }
+        System.out.println();
     }
 
     public void printArray(double[] array) {
         for (double tmp : array) {
             System.out.print(tmp + "\t");
         }
+        System.out.println();
     }
 
     public void printArray(float[] array) {
         for (float tmp : array) {
             System.out.print(tmp + "\t");
         }
+        System.out.println();
     }
 }
