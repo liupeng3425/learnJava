@@ -6,9 +6,10 @@ package chapter02;
  */
 public class TV {
 
-    int channel;
-    int volumeLevel;
-    boolean on;
+    private int channel;
+    private int volumeLevel;
+
+    private boolean on;
 
     public TV() {
         channel = 1;
@@ -22,12 +23,26 @@ public class TV {
         on = newOn;
     }
 
+    public void printStatus() {
+        System.out.println("Channel is " + this.getChannel() + ".");
+        System.out.println("Volume Level is " + this.getVolumeLevel() + ".");
+        System.out.println("Switch is " + this.on + ".");
+    }
+
     public void turnOn() {
         on = true;
     }
 
     public void turnOff() {
         on = false;
+    }
+
+    public boolean isOn() {
+        return on;
+    }
+
+    public void setOn(boolean on) {
+        this.on = on;
     }
 
     public int getChannel() {
