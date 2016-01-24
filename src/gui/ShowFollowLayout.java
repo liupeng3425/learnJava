@@ -40,6 +40,9 @@ public class ShowFollowLayout extends JFrame {
         showFollowLayout.setTitle("ShowFollowLayout");
         showFollowLayout.setSize(600, 200);
         showFollowLayout.setLocationRelativeTo(null);
+
+//        showFollowLayout.setForeground(Color.black);
+
         showFollowLayout.setVisible(true);
     }
 }
