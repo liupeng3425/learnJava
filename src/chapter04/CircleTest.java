@@ -6,7 +6,15 @@ package chapter04;
  */
 public class CircleTest {
     public static void main(String[] args) {
-        Circle circle = new Circle(25);
+        Circle circle;
+
+        try {
+            circle = new Circle(-25);
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.toString());
+            System.out.println("Set the radius 1.");
+            circle = new Circle();
+        }
 
         System.out.println(circle.getPerimeter());
 

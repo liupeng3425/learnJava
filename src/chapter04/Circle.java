@@ -17,8 +17,11 @@ public class Circle extends GeometricObjects {
     /**
      * @param radius 半径
      */
-    public Circle(double radius) {
-        this.radius = radius;
+    public Circle(double radius) throws IllegalArgumentException {
+        if (radius < 0)
+            throw new IllegalArgumentException("Radius cannot be negative.");
+        else
+            this.radius = radius;
     }
 
     /**
@@ -43,8 +46,11 @@ public class Circle extends GeometricObjects {
      *
      * @param radius 半径
      */
-    public void setRadius(double radius) {
-        this.radius = radius;
+    public void setRadius(double radius) throws IllegalArgumentException {
+        if (radius < 0)
+            throw new IllegalArgumentException("Radius cannot be negative.");
+        else
+            this.radius = radius;
     }
 
     /**

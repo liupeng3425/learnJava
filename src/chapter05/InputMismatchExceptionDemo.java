@@ -19,7 +19,7 @@ public class InputMismatchExceptionDemo {
                 System.out.println("The number entered is " + number);
                 continueInput = false;
             } catch (InputMismatchException e) {
-//                e.printStackTrace();
+                System.out.println(e.toString());
                 System.out.println("Try again.(Incorrect input: an integer is required.)");
                 // 丢弃当前输入行。
                 scanner.nextLine();
