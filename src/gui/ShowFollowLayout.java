@@ -1,6 +1,7 @@
 package gui;
 
 import javax.swing.*;
+import javax.swing.border.TitledBorder;
 import java.awt.*;
 
 /**
@@ -28,6 +29,7 @@ public class ShowFollowLayout extends JFrame {
         jPanelButton.setLayout(new FlowLayout(FlowLayout.CENTER, 10, 20));
         jPanelButton.add(new JButton("OK"));
         jPanelButton.add(new JButton("Cancel"));
+        jPanelOthers.setBorder(new TitledBorder("Others"));
 
         add(jPanelOthers);
         add(jPanelButton);
@@ -40,8 +42,6 @@ public class ShowFollowLayout extends JFrame {
         showFollowLayout.setTitle("ShowFollowLayout");
         showFollowLayout.setSize(600, 200);
         showFollowLayout.setLocationRelativeTo(null);
-
-//        showFollowLayout.setForeground(Color.black);
 
         showFollowLayout.setVisible(true);
     }

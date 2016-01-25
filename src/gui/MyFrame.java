@@ -11,6 +11,11 @@ public class MyFrame {
     public static void main(String[] args) {
         JFrame jFrame = new JFrame("MyFrame");
         JButton btnOK = new JButton("OK");
+
+        btnOK.setBackground(Color.CYAN);
+        btnOK.setForeground(Color.LIGHT_GRAY);
+        btnOK.setToolTipText("确定");
+
         jFrame.add(btnOK);
         jFrame.add(new JButton("Cancel"));
 
