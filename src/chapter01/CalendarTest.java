@@ -1,6 +1,8 @@
 package chapter01;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.GregorianCalendar;
 
 /**
@@ -14,6 +16,9 @@ public class CalendarTest {
         System.out.println(Calendar.DAY_OF_MONTH);
         System.out.println(Calendar.DATE);
         System.out.println(calendar.get(Calendar.DAY_OF_MONTH));
+
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("YYYY-MM-dd");
+        System.out.println(simpleDateFormat.format(new Date()));
     }
 }
 
