@@ -1,35 +1,33 @@
-package test;
+package utils;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 /**
  * Created by Peng on 2016/2/29.
- * test md5.
+ * generate MD5 code.
  */
-public class MD5Test {
+public class MD5Util {
     private static final String[] hexDigits =
             {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F"};
 
-    public static void main(String[] args) {
-        String plainCode = "1234";
+    public static String getMD5Code(String origin) {
         try {
             MessageDigest messageDigest = MessageDigest.getInstance("MD5");
-            messageDigest.update(plainCode.getBytes());
+            messageDigest.update(origin.getBytes());
             byte[] code = messageDigest.digest();
-            System.out.println(MD5Test.bytesToString(code));
+            return bytesToString(code);
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
+            return null;
         }
     }
 
-    public static String bytesToString(byte[] input) {
+    private static String bytesToString(byte[] input) {
         StringBuilder stringBuilder = new StringBuilder();
         for (byte anInput : input) {
-            System.out.printf("%d ", anInput);
             stringBuilder.append(byteToHex(anInput));
         }
-        System.out.println();
         return stringBuilder.toString();
     }
 
