@@ -63,7 +63,7 @@ public class CRC16 {
     // 测试
     public static void main(String[] args) {
         // 0x02 05 00 03 FF 00 , crc16=7C 09
-        int crc = CRC16.calcCrc16(new byte[]{0x02, 0x05, 0x00, 0x03, (byte) 0xff, 0x00});
+        int crc = CRC16.calcCrc16(new byte[]{0x01, 0x01, 0x01, 0x01});
         System.out.println(String.format("0x%04x", crc));
     }
 }

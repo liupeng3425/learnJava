@@ -21,9 +21,7 @@ public class Joiner {
             String tmp = scanner.next();
             outBinString = outBinString + tmp;
         }
-        if (outBinString != null) {
-            outBinString = outBinString.replaceAll("\r|\n", "");
-        }
+        outBinString = outBinString.replaceAll("\r|\n", "");
         return outBinString;
     }
 
