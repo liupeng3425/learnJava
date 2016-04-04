@@ -10,7 +10,8 @@ import java.util.Scanner;
  * cut bin string to several group. 16 bit each.
  */
 public class Cutter {
-    public static final int length = 16;
+    public static final int length = 11;
+    public static final int seq_length = 5;
 
     public static void cut(String binString) throws FileNotFoundException {
         File file = new File("data/binStringGroup.txt");

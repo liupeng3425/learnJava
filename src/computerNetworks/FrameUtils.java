@@ -19,7 +19,7 @@ public class FrameUtils {
         frameString = frameString.replaceAll("111110", "11111");
         int seq = Integer.parseInt(frameString.substring(0, Frame.SEQ_LENGTH));
         String data = frameString.substring(Frame.SEQ_LENGTH, Frame.SEQ_LENGTH + Frame.DATA_LENGTH);
-        String crc = frameString.substring(Frame.SEQ_LENGTH + Frame.CRC_LENGTH);
+        String crc = frameString.substring(Frame.SEQ_LENGTH + Frame.DATA_LENGTH);
 
         return new Frame(seq, data, crc);
     }
