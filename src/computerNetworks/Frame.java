@@ -6,6 +6,8 @@ package computerNetworks;
  */
 public class Frame {
     public static final int SEQ_LENGTH = 1;
+    public static final int DATA_LENGTH = 16;
+    public static final int CRC_LENGTH = 16;
     private int seq;
     private String data;
     private String crc;

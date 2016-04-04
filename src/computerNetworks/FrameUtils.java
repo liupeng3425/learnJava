@@ -17,10 +17,9 @@ public class FrameUtils {
         frameString = frameString.substring(0, frameString.lastIndexOf("01111110"));
         frameString = frameString.replaceAll("01111110", "");
         frameString = frameString.replaceAll("111110", "11111");
-        // TODO: 2016/4/1
         int seq = Integer.parseInt(frameString.substring(0, Frame.SEQ_LENGTH));
-        String data = frameString.substring(Frame.SEQ_LENGTH, Frame.SEQ_LENGTH + 16);
-        String crc = frameString.substring(Frame.SEQ_LENGTH + 16);
+        String data = frameString.substring(Frame.SEQ_LENGTH, Frame.SEQ_LENGTH + Frame.DATA_LENGTH);
+        String crc = frameString.substring(Frame.SEQ_LENGTH + Frame.CRC_LENGTH);
 
         return new Frame(seq, data, crc);
     }
