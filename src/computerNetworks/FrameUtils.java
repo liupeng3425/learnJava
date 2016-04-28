@@ -12,15 +12,23 @@ public class FrameUtils {
         return sendString;
     }
 
+    public static String sendFrameString(String frame) {
+        String sendString = frame;
+        sendString = sendString.replaceAll("11111", "111110");
+        sendString = "01111110" + sendString + "01111110";
+        return sendString;
+    }
+
     public static Frame getFrameFromString(String receivedData) {
         String frameString = receivedData.substring(receivedData.indexOf("01111110"));
         frameString = frameString.substring(0, frameString.lastIndexOf("01111110"));
         frameString = frameString.replaceAll("01111110", "");
         frameString = frameString.replaceAll("111110", "11111");
-        int seq = Integer.parseInt(frameString.substring(0, Frame.SEQ_LENGTH));
+//        if (Frame.SEQ_LENGTH > 0)
+//            int seq = Integer.parseInt(frameString.substring(0, Frame.SEQ_LENGTH));
         String data = frameString.substring(Frame.SEQ_LENGTH, Frame.SEQ_LENGTH + Frame.DATA_LENGTH);
         String crc = frameString.substring(Frame.SEQ_LENGTH + Frame.DATA_LENGTH);
 
-        return new Frame(seq, data, crc);
+        return new Frame(0, data, crc);
     }
 }

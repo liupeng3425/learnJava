@@ -13,7 +13,7 @@ import java.util.Scanner;
  */
 public class Decoder {
     public static void main(String[] args) throws FileNotFoundException, UnsupportedEncodingException {
-        File file = new File("data/binStringReceived.txt");
+        File file = new File("data/binStringSend.txt");
         Scanner scanner = new Scanner(file);
         String binStringReceived = scanner.nextLine();
         byte[] utf8Byte = binStringToAsc(binStringReceived);

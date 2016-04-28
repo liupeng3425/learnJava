@@ -20,9 +20,9 @@ public class FrameTest {
             String data = scanner.nextLine();
             String crc = CRC16.getCRCString(Integer.parseInt(seq + data, 2));
             Frame frame = new Frame(seq, data, crc);
-
             printWriter.println(FrameUtils.sendFrameString(frame));
             seq++;
+            if (seq > 1) seq = 0;
         }
         printWriter.close();
     }
