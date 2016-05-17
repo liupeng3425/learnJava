@@ -8,7 +8,7 @@ import utils.MD5Util;
  */
 public class TestMD5Util {
     public static void main(String[] args) {
-        String plainCode = "hello";
+        String plainCode = "1234";
         System.out.println("origin code: " + plainCode);
         System.out.println("MD5: " + MD5Util.getMD5Code(plainCode));
     }
